@@ -10,8 +10,8 @@ application = Flask(__name__)
 app=application
 
 # scaler_path = os.path.join(r"D:\Pregrad_Course\Aman_Algerian_Forest_Fire\Model","standardScalar.pkl")
-scaler =pickle.load(open(r"D:\Pregrad_Course\Aman_Algerian_Forest_Fire\Model\standardScaler.pkl", "rb"))
-model  = pickle.load(open(r"D:\Pregrad_Course\Aman_Algerian_Forest_Fire\Model\modelforPrecision.pkl", "rb"))
+scaler = pickle.load(open(r"D:\Pregrad_Course\Aman_Algerian_Forest_Fire\Model\standardScaler.pkl", "rb"))
+model  = pickle.load(open(r"D:\Pregrad_Course\Aman_Algerian_Forest_Fire\Model\modelforPrecisions.pkl", "rb"))
 
 
 @app.route('/')
