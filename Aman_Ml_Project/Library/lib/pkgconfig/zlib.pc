@@ -1,0 +1,13 @@
+prefix=D:/Pregrad_Course/Aman_Algerian_Forest_Fire/Aman_ml_project/Library
+exec_prefix=D:/Pregrad_Course/Aman_Algerian_Forest_Fire/Aman_ml_project/Library
+libdir=D:/Pregrad_Course/Aman_Algerian_Forest_Fire/Aman_ml_project/Library/lib
+sharedlibdir=D:/Pregrad_Course/Aman_Algerian_Forest_Fire/Aman_ml_project/Library/lib
+includedir=D:/Pregrad_Course/Aman_Algerian_Forest_Fire/Aman_ml_project/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
