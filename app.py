@@ -26,16 +26,24 @@ def predict_datapoint():
 
     if request.method=='POST':
 
-        Year =int(request.form.get("Year"))
-        Month = float(request.form.get('Month'))
-        Day = float(request.form.get('Day'))
-        Temperature = float(request.form.get('Temperature'))
-        ISI = float(request.form.get('ISI'))
-        FWI = float(request.form.get('FWI'))
-        AlgerianForestFireFunction = float(request.form.get('AlgerianForestFireFunction'))
-        Rain = float(request.form.get('Rain'))
+        Year =(request.form.get("Year"))
+        Month = (request.form.get('Month'))
+        Day = (request.form.get('Day'))
+        Temperature = (request.form.get('Temperature'))
+        RH = (request.form.get('RH'))
+        Ws = (request.form.get('Ws'))
+        Rain = (request.form.get('Rain')) 
+        FFMC = (request.form.get('FFMC'))
+        DMC = (request.form.get('DMC'))
+        DC = (request.form.get('DC'))    
+        ISI = (request.form.get('ISI'))
+        BUI = (request.form.get('BUI')) 
+        FWI = (request.form.get('FWI'))
+        Region = (request.form.get('Region')) 
+        
+       
 
-        new_data=scaler.transform([[Year,Month,Day,Temperature,ISI,FWI,AlgerianForestFireFunction,Rain]])
+        new_data=scaler.transform([[Year,Month,Day,Temperature,RH,Ws,Rain,FFMC,DMC,DC,ISI,BUI,FWI,Region]]) 
         predict=model.predict(new_data)
        
         if predict[0] ==1 :
